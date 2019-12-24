@@ -1,0 +1,29 @@
+    <div id="grid">
+        {{POSTS}}
+    </div>
+<style>
+    #grid {
+        margin: auto;
+    }
+    .grid-item {
+        float: left;
+        width: 300px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .grid-item img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+</style>
+
+<script>
+
+    var msnry = new Masonry('#grid', {
+        itemSelector: '.grid-item',
+        columnWidth: 300,
+        fitWidth: true,
+        gutter: 20
+    });
+</script>

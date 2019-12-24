@@ -1,0 +1,8 @@
+RewriteEngine on
+
+RewriteRule ^public/(.*) src/public/$1
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/(public|src/public)/ [NC]
+RewriteRule . index.php [L]
+
